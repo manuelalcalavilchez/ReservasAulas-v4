@@ -1,6 +1,6 @@
 # Tarea Reservas de Aulas
-## Profesor: Manuel Alcalá Vílchez
-## Alumno:
+## Profesor: Andres Rubio
+## Alumno:Manuel Alcalá Vílchez
 
 Desde el IES Al-Ándalus nos acaban de dar unos nuevos requisitos a aplicar sobre la última versión que le mostramos y que les gustó bastante. Lo que nos piden es lo siguiente:
 
