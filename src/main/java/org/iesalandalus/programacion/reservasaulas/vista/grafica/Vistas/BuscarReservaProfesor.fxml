@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.vista.grafica.controladoresVistas.BuscarReservaProfesorController">
+    <stylesheets>
+        <URL value="@buscarreservaprofesor.css" />
+    </stylesheets>
+   <children>
+      <ListView fx:id="lvReservas" layoutY="126.0" prefHeight="200.0" prefWidth="600.0" />
+      <ChoiceBox fx:id="cbBuscarReserva" layoutX="319.0" layoutY="16.0" prefWidth="150.0" />
+      <Label layoutX="136.0" layoutY="18.0" text="Seleccione el profesor">
+         <font>
+            <Font name="Star Jedi" size="12.0" />
+         </font>
+      </Label>
+      <HBox layoutX="354.0" layoutY="339.0" prefHeight="25.0" prefWidth="143.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+            <Button fx:id="botonCancelarBuscarReservaProfesor" mnemonicParsing="false" onAction="#CancelarBuscarReservaProfesor" text="Cancelar">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

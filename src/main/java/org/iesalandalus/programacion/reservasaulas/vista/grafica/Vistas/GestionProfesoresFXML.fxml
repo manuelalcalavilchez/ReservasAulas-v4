@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.vista.grafica.controladoresVistas.GestionProfesoresFXMLController">
+   <children>
+      <SplitPane dividerPositions="0.1354515050167224" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="798.0" layoutX="227.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/LogoInsti.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="712.0" fitWidth="1117.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/fondo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="229.0" layoutY="44.0" prefHeight="43.0" prefWidth="344.0" text="gestión de Profesores" textAlignment="CENTER">
+                     <font>
+                        <Font name="Star Jedi" size="24.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="lvProfesores" layoutY="87.0" prefHeight="200.0" prefWidth="798.0" />
+                  <HBox layoutX="253.0" layoutY="337.0" prefHeight="60.0" prefWidth="445.0" spacing="30.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#anadirProfesor" prefHeight="60.0" prefWidth="38.0">
+                           <graphic>
+                              <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/+profesor.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#borrarProfesor" prefHeight="60.0" prefWidth="41.0">
+                           <graphic>
+                              <ImageView fitHeight="52.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/-profesor.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#buscarReservaProfesor" prefHeight="29.0" prefWidth="231.0" text="Ver reservas por profesor">
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Star Jedi Outline" size="12.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="botonAtras" layoutX="694.0" layoutY="425.0" mnemonicParsing="false" onAction="#atras">
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/atras.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

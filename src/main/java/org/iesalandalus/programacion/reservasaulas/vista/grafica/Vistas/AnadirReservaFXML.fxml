@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="415.0" prefWidth="649.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.vista.grafica.controladoresVistas.AnadirReservaFXMLController">
+    <stylesheets>
+        <URL value="@anadiraulafxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="243.0" layoutY="14.0" text="Nueva reserva">
+         <font>
+            <Font name="Star Jedi" size="18.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER" layoutX="90.0" layoutY="70.0" prefHeight="187.0" prefWidth="236.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="135.0" text="Profesor" textAlignment="RIGHT" wrapText="true" />
+            <Label prefHeight="17.0" prefWidth="114.0" text="Aula" textAlignment="RIGHT" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="cbProfesor" prefWidth="150.0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="cbAula" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <RadioButton fx:id="rbHora" mnemonicParsing="false" text="Por horas" />
+                  <RadioButton fx:id="rbTramo" mnemonicParsing="false" prefHeight="24.0" prefWidth="87.0" selected="true" text="Por tramo" />
+               </children>
+            </VBox>
+            <Label prefHeight="17.0" prefWidth="116.0" text="Permanencia" textAlignment="RIGHT" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <HBox layoutX="250.0" layoutY="351.0" prefHeight="25.0" prefWidth="152.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+            <Button fx:id="botonCancelarAnadirReserva" mnemonicParsing="false" onAction="#cancelarAnadirReserva" text="Cancelar" />
+         </children>
+      </HBox>
+      <GridPane fx:id="GridHora" layoutX="400.0" layoutY="81.0" prefHeight="92.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelDia" text="Dia" visible="false" />
+            <Label fx:id="labelDiaHora" text="Hora" textAlignment="RIGHT" visible="false" GridPane.rowIndex="1" />
+            <DatePicker fx:id="fecha" visible="false" GridPane.columnIndex="1" />
+            <TextField fx:id="tfHora" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="GrigTramo" layoutX="400.0" layoutY="196.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelDiaTramo" prefHeight="17.0" prefWidth="99.0" text="Dia" textAlignment="RIGHT" visible="false" />
+            <Label fx:id="labelTramo" prefHeight="17.0" prefWidth="98.0" text="Tramo" textAlignment="RIGHT" visible="false" GridPane.rowIndex="1" />
+            <DatePicker fx:id="fechaTramo" visible="false" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="cbExtras" prefWidth="150.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

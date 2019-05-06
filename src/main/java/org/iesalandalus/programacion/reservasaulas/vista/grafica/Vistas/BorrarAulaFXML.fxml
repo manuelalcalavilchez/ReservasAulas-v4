@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="222.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.vista.grafica.controladoresVistas.BorrarAulaFXMLController">
+    <stylesheets>
+        <URL value="@anadiraulafxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="129.0" layoutY="14.0" text="borrar aula">
+         <font>
+            <Font name="Star Jedi" size="18.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER" layoutX="8.0" layoutY="70.0" prefHeight="64.0" prefWidth="318.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="78.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="240.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="135.0" text="Nombre" textAlignment="RIGHT" wrapText="true" />
+            <ChoiceBox fx:id="cbBorrarAula" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <HBox layoutX="132.0" layoutY="154.0" prefHeight="25.0" prefWidth="152.0" spacing="30.0">
+         <children>
+            <Button fx:id="aceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+            <Button fx:id="botonCancelarBorrarAula" mnemonicParsing="false" onAction="#cancelarBorrarAula" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
